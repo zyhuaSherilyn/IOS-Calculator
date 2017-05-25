@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+struct CalculatorBrain {
+    
+    private var accumulator: Double? //no accumulated result in the beginning
+    
+    mutating func performOperation(_ symbol: String) {
+        switch symbol {
+        case "π":
+            accumulator = Double.pi
+        case "√":
+            if let operand = accumulator{
+                accumulator = sqrt(operand)
+            }
+        default:
+            break
+        }
+
+    }
+
+    // structs copy on write
+    // have to indicate that the struct is changed by add "mutating"
+    mutating func setOperand(_ operand: Double) {
+        accumulator = operand
+    }
+    
+    var result: Double? {
+        get { // read-only property
+            return accumulator
+        }
+    }
+
+}
