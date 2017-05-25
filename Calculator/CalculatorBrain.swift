@@ -17,15 +17,15 @@ struct CalculatorBrain {
         case "π":
             accumulator = Double.pi
         case "√":
-            if let operand = accumulator{
+            if let operand = accumulator {
                 accumulator = sqrt(operand)
             }
         default:
             break
         }
-
+        
     }
-
+    
     // structs copy on write
     // have to indicate that the struct is changed by add "mutating"
     mutating func setOperand(_ operand: Double) {
@@ -37,5 +37,5 @@ struct CalculatorBrain {
             return accumulator
         }
     }
-
+    
 }
