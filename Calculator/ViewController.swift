@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by Sherilyn Hua on 2017-05-23.
+//  Created by Sherilyn Hua on 2017-05-20.
 //  Copyright © 2017 Sherilyn Hua. All rights reserved.
 //
 
